@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="371.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+			fx:controller="application.MainController">
+   <children>
+      <Label layoutX="34.0" layoutY="98.0" text="设备mac地址:" />
+      <Label layoutX="34.0" layoutY="130.0" text="选择操作类型:" />
+      <TextField fx:id="mac" layoutX="135.0" layoutY="94.0" prefHeight="23.0" prefWidth="188.0" />
+      <MenuButton fx:id="operatetype" layoutX="135.0" layoutY="126.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="188.0" text="MenuButton">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <Button onAction="#confirm_press" layoutX="283.0" layoutY="200.0" mnemonicParsing="false" text="确定" />
+      <Label layoutX="18.0" layoutY="34.0" text="欢迎使用">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="162.0" text="选择服务器:" />
+      <MenuButton fx:id="serverid" layoutX="135.0" layoutY="158.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="188.0" text="正式服务器">
+         <items>
+            <MenuItem mnemonicParsing="false" text="正式服务器" />
+            <MenuItem mnemonicParsing="false" text="测试服务器" />
+         </items>
+      </MenuButton>
+   </children>
+</AnchorPane>
