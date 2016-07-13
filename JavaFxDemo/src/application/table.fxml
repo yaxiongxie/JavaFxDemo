@@ -11,8 +11,6 @@
    <children>
       <TableView fx:id="tableView" prefHeight="400.0" prefWidth="600.0">
         <columns>
-          <TableColumn prefWidth="55.0" text="id" />
-            <TableColumn prefWidth="544.0" text="content" />
         </columns>
       </TableView>
    </children>

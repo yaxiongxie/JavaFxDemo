@@ -24,7 +24,7 @@ public class CustomDialog {
 			dialogStage.getIcons().add(new Image(
 					CustomDialog.class.getResourceAsStream("logo.png")));
 			controller.setStage(dialogStage);
-			controller.setContent("content");
+			controller.setContent(content);
 			dialogStage.show();
 		}catch(Exception e){
 			e.printStackTrace();

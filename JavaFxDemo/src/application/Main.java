@@ -18,11 +18,10 @@ public class Main extends Application {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("main.fxml"));
 			Parent root = (Parent)loader.load();
 			MainController controller = (MainController)loader.getController();
-			controller.setStage(primaryStage); // or what you want to do
+			controller.setStage(primaryStage); 
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("main");
-			primaryStage.setResizable(false);
 			primaryStage.getIcons().add(new Image(
 	                getClass().getResourceAsStream("logo.png")));
 			primaryStage.show();
@@ -30,7 +29,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-	
+	//28-d9-8a-02-f0-41
 	public static void main(String[] args) {
 		launch(args);
 	}

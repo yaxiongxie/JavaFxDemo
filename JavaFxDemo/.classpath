@@ -10,5 +10,6 @@
 	<classpathentry kind="lib" path="src/commons-logging-1.0.3.jar"/>
 	<classpathentry kind="lib" path="src/commons-pool.jar"/>
 	<classpathentry kind="lib" path="src/jedis-2.0.0.jar"/>
+	<classpathentry kind="lib" path="src/smack.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

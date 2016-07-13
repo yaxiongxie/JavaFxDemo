@@ -23,7 +23,7 @@ public class MessageDialogController implements Initializable{
 	
 	@FXML
 	public void press_button(){
-		System.out.println(content.getText());
+		stage.close();
 	}
     
     @Override  
