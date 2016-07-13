@@ -30,6 +30,7 @@ public class TableController implements Initializable{
 	public void setSet(Collection<String> set) {
 		this.set = set;
 		
+		TableUtils.installCopyPasteHandler(tableView);
 		TableColumn idColumn = new TableColumn("id");
 		idColumn.setMinWidth(55);
 		idColumn.setCellValueFactory(

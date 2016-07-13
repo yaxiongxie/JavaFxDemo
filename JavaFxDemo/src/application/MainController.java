@@ -37,33 +37,44 @@ public class MainController implements Initializable{
     
 	@FXML
 	public void confirm_press(ActionEvent event){
+		String macAddress=mac.getText();
+		macAddress=macAddress.toLowerCase().replace(":", "-");
 		int serverFlag=1;
 		if(serverid.getText().equals("测试服务器")){
 			serverFlag=2;
 		}
 		String operateString=operatetype.getText();
 		if(operateString.equals("查询主帐号")){
-			String mainbind=OperateService.getMainBind(mac.getText(), serverFlag);
+			String mainbind=OperateService.getMainBind(macAddress, serverFlag);
 			CustomDialog.messageDialog(stage, "title", mainbind);
 		}else if(operateString.equals("查询次帐号")){
-			Set<Serializable> set=OperateService.getSubBind(mac.getText(), serverFlag);
+			Set<Serializable> set=OperateService.getSubBind(macAddress, serverFlag);
 			Set<String> sSet=new HashSet<>();
 			for(Serializable serializable:set){
 				sSet.add(serializable.toString());
 			}
 			showTable(sSet);
 		}else if(operateString.equals("注册mac")){
-			OperateService.saveMac(mac.getText(), serverFlag);
+			OperateService.saveMac(macAddress, serverFlag);
 			CustomDialog.messageDialog(stage, "title", "注册完成");
 		}else if(operateString.equals("查询kit所有子结点")){
-			List<String> list=OperateService.getKitSubNodes(mac.getText(), serverFlag);
+			List<String> list=OperateService.getKitSubNodes(macAddress, serverFlag);
 			showTable(list);
 		}else if(operateString.equals("查询门磁历史记录")){
-			List<String> list=OperateService.getMcHistoryList(mac.getText(), serverFlag);
+			List<String> list=OperateService.getMcHistoryList(macAddress, serverFlag);
 			showTable(list);
 		}else if(operateString.equals("查询人体历史记录")){
-			List<String> list=OperateService.getRtHistoryList(mac.getText(), serverFlag);
+			List<String> list=OperateService.getRtHistoryList(macAddress, serverFlag);
 			showTable(list);
+		}else if(operateString.equals("查询设备信息")){
+			List<String> list=OperateService.findByMac(macAddress, serverFlag);
+			showTable(list);
+		}else if(operateString.equals("查询设备插件")){
+			List<String> list=OperateService.getModulesByMac(macAddress, serverFlag);
+			showTable(list);
+		}else if(operateString.equals("查询kit结点的电量")){
+			String string=OperateService.getBattery(macAddress, serverFlag);
+			CustomDialog.messageDialog(stage, "title", string);
 		}
 //		CustomDialog.messageDialog(stage, "title", operatetype.getText());
 //		

@@ -17,12 +17,15 @@
       <Label layoutX="34.0" layoutY="98.0" text="设备mac地址:" />
       <Label layoutX="34.0" layoutY="130.0" text="选择操作类型:" />
       <TextField fx:id="mac" layoutX="135.0" layoutY="94.0" prefHeight="23.0" prefWidth="188.0" />
-      <MenuButton fx:id="operatetype" layoutX="135.0" layoutY="126.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="188.0" text="注册mac">
+      <MenuButton fx:id="operatetype" layoutX="135.0" layoutY="126.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="188.0" text="查询设备信息">
         <items>
+        <MenuItem mnemonicParsing="false" text="查询设备信息" />
+        <MenuItem mnemonicParsing="false" text="查询设备插件" />
           <MenuItem mnemonicParsing="false" text="注册mac" />
           <MenuItem mnemonicParsing="false" text="查询主帐号" />
           <MenuItem mnemonicParsing="false" text="查询次帐号" />
           <MenuItem mnemonicParsing="false" text="查询kit所有子结点" />
+          <MenuItem mnemonicParsing="false" text="查询kit结点的电量" />
           <MenuItem mnemonicParsing="false" text="查询门磁历史记录" />
           <MenuItem mnemonicParsing="false" text="查询人体历史记录" />
         </items>
